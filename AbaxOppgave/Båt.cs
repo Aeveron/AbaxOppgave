@@ -1,0 +1,6 @@
+﻿namespace AbaxOppgave
+{
+    class Båt
+    {
+    }
+}
