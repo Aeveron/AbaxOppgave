@@ -6,10 +6,11 @@ namespace AbaxOppgave
     {
         static void Main(string[] args)
         {           
-            var car1 = new Bil("NF123456", "147kw", "200km/t", "grønn", "lett kjøretøy");
-            var car2 = new Bil("NF654321", "150kw", "195km/t", "blå", "lett kjøretøy");
+            var bil1 = new Bil("NF123456", 147, 200, "grønn", Transportmiddeltype.LettKjøretøy);
+            bil1.Print();
+            var bil2 = new Bil("NF654321", 150, 195, "blå", Transportmiddeltype.LettKjøretøy);
 
-            Console.WriteLine();
+            
         }
     }
 }

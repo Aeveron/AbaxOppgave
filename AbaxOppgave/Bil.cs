@@ -1,14 +1,16 @@
-﻿namespace AbaxOppgave
+﻿using System;
+
+namespace AbaxOppgave
 {
     public class Bil
     {
         private string _regNr;
-        private string _effect;
-        private string _speed;
+        private int _effect;
+        private int _speed;
         private string _carColor;
-        private string _VehicleType;
+        private Transportmiddeltype _VehicleType;
 
-        public Bil(string regNr, string effect, string speed, string carColor, string vehicleType)
+        public Bil(string regNr, int effect, int speed, string carColor, Transportmiddeltype vehicleType)
         {
             _regNr = regNr;
             _effect = effect;
@@ -17,5 +19,9 @@
             _VehicleType = vehicleType;
         }
 
+        public void Print()
+        {
+            Console.WriteLine(ToString());
+        }
     }
 }
