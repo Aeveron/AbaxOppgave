@@ -1,24 +1,19 @@
 ﻿using System;
+using System.Dynamic;
 
 namespace AbaxOppgave
 {
-    public class Bil
+    public class Bil : Transportmiddel
     {
-        private string _regNr;
-        private int _effect;
-        private int _speed;
-        private string _carColor;
-        private Transportmiddeltype _VehicleType;
+      
+        private string Farge { get; }
 
-        public Bil(string regNr, int effect, int speed, string carColor, Transportmiddeltype vehicleType)
+        public Bil(string kjennetegn, decimal maksimalfart, decimal effekt, string farge, Transportmiddeltype transportmiddeltype)
+            : base(kjennetegn, maksimalfart, effekt, transportmiddeltype)
         {
-            _regNr = regNr;
-            _effect = effect;
-            _speed = speed;
-            _carColor = carColor;
-            _VehicleType = vehicleType;
+            Farge = farge;
         }
-
+  
         public void Print()
         {
             Console.WriteLine(ToString());
