@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Text;
 
 namespace AbaxOppgave
 {
@@ -13,10 +14,17 @@ namespace AbaxOppgave
         {
             Farge = farge;
         }
-  
-        public void Print()
+
+        public void Kjør()
         {
-            Console.WriteLine(ToString());
+            Console.WriteLine(nameof(Bil) + " " + Kjennetegn + " har fått beskjed om og kjøre.");
         }
+
+        public override void ToStringOptional(StringBuilder text)
+        {
+            base.ToStringOptional(text);
+            Add(text, nameof(Farge), Farge);
+        }
+       
     }
 }
