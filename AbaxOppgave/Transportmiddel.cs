@@ -17,7 +17,7 @@ namespace AbaxOppgave
             {nameof(Effekt), "kw"},
         };
 
-        public Transportmiddel(string kjennetegn, decimal maksimalfart, decimal effekt, Transportmiddeltype? type)
+        public Transportmiddel(string kjennetegn, decimal? maksimalfart, decimal effekt, Transportmiddeltype? type)
         {
             Kjennetegn = kjennetegn;
             Maksimalfart = maksimalfart;
